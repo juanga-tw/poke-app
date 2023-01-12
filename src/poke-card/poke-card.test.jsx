@@ -17,4 +17,18 @@ describe('PokeCard', () => {
         expect(image).toBeInTheDocument();
         expect(image.src).toBe(bulbasaur.sprites.other["official-artwork"].front_default);
     });
+
+    it("should show pokemon's health", () => {
+        render(<PokeCard pokemon={bulbasaur}/>);
+
+        const health = screen.getByText('45 hp');
+        expect(health).toBeInTheDocument();
+    });
+
+    it("should show pokemon's attack", () => {
+        render(<PokeCard pokemon={bulbasaur}/>);
+
+        const attack = screen.getByText('49');
+        expect(attack).toBeInTheDocument();
+    });
 });
