@@ -1,0 +1,19 @@
+.poke-card {
+    width: 350px;
+    border: solid 1px black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poke-card .picture {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+.poke-card .name {
+    text-transform: capitalize;
+}
