@@ -1,11 +1,10 @@
-import {render, screen} from "@testing-library/react";
+import { render, screen} from "@testing-library/react";
 import PokeCard from "./poke-card";
 import bulbasaur from '../bulbasaur.json';
 
 describe('PokeCard', () => {
     it("should show pokemon's name", () => {
         render(<PokeCard pokemon={bulbasaur}/>);
-
 
         expect(screen.getByText(bulbasaur.name)).toBeInTheDocument();
     });
@@ -21,14 +20,28 @@ describe('PokeCard', () => {
     it("should show pokemon's health", () => {
         render(<PokeCard pokemon={bulbasaur}/>);
 
-        const health = screen.getByText('45 hp');
+        const health = screen.getByText('45hp');
         expect(health).toBeInTheDocument();
     });
 
     it("should show pokemon's attack", () => {
         render(<PokeCard pokemon={bulbasaur}/>);
 
-        const attack = screen.getByText('49');
+        const attack = screen.getByTestId('attack');
         expect(attack).toBeInTheDocument();
+    });
+
+    it("should show pokemon's special attack", () => {
+        render(<PokeCard pokemon={bulbasaur}/>);
+
+        const attack = screen.getByText('65K');
+        expect(attack).toBeInTheDocument();
+    });
+
+    it("should show pokemon's defense", () => {
+        render(<PokeCard pokemon={bulbasaur}/>);
+
+        const defense = screen.getByTestId('defense');
+        expect(defense).toBeInTheDocument();
     });
 });
