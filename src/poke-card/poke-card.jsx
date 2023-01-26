@@ -17,7 +17,7 @@ const PokeCard = ({pokemon}) => {
             <div className={"poke-card-footer"}>
                 <div className={"base-stat"}>
                     <h3 data-testid="attack">{pokemon?.stats?.[1]['base_stat']}K</h3>
-                    <p>Attack</p>
+                    <div>Attack</div>
                 </div>
                 <div className={"base-stat"}>
                     <h3>{pokemon?.stats?.[3]['base_stat']}K</h3>

@@ -1,6 +1,6 @@
 import { render, screen} from "@testing-library/react";
 import PokeCard from "./poke-card";
-import bulbasaur from '../bulbasaur.json';
+import bulbasaur from '../__fixtures__/bulbasaur.json';
 
 describe('PokeCard', () => {
     it("should show pokemon's name", () => {
